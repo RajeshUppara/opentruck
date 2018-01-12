@@ -1,0 +1,49 @@
+{
+  "name": "opentruck",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "numeral": "^1.5.3",
+    "prop-types": "^15.6.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.50.0",
+    "react-native-config": "^0.11.4",
+    "react-native-cookies": "^3.2.0",
+    "react-native-elements": "^0.18.5",
+    "react-native-google-maps": "^1.0.0",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-maps": "0.15.3",
+    "react-native-navigation": "^1.1.334",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-spinkit": "^1.1.1",
+    "react-native-swiper": "^1.5.4",
+    "react-native-vector-icons": "^4.4.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "seamless-immutable": "^7.1.2",
+    "superagent": "^3.8.2"
+  },
+  "devDependencies": {
+    "babel-jest": "16.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "jest": "16.0.1",
+    "jest-react-native": "16.0.0",
+    "react-native-dotenv": "0.0.2",
+    "react-test-renderer": "15.3.2",
+    "redux-immutable-state-invariant": "^2.0.0",
+    "redux-logger": "^3.0.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

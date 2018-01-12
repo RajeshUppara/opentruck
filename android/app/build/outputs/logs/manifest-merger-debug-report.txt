@@ -1,0 +1,324 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+MERGED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:react-native-vector-icons] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-20:12
+MERGED from [:react-native-linear-gradient] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-cookies] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-cookies/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-config] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-config/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:2:1-15:12
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/fcd64f238f7679088d32256b686d2a2e/AndroidManifest.xml:2:1-14:12
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/11c56ca691a574cd987d69f6f43ad712/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:16:1-21:12
+MERGED from [com.github.ybq:Android-SpinKit:1.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/Android-SpinKit-1.1.0.aar/92a3c5707dcca21ca8a86f827d873341/AndroidManifest.xml:2:1-10:12
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/e138307a59eb7bda5a29322543e0a9cc/AndroidManifest.xml:10:1-18:12
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/c59b301fa9d69c0fd0d6d6e2e9895a73/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/b5faa86515fdef2e1edefd669e90e19c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/069d286b6fb3bf0a1777dda6a6365a25/AndroidManifest.xml:1:1-4:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/17103cbf45fb14bb78a829fe8e012e54/AndroidManifest.xml:1:1-3:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.4.aar/3974772fa385b9463ff5481d330acdab/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/c412ba7908cacbc6dfe12000b08c9e24/AndroidManifest.xml:17:1-26:12
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/0dfbbbaa09fb52c70ff02cf0a8dab9d8/AndroidManifest.xml:2:1-14:12
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/b5502b6116d8e369fd83a9099c83de13/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/53a92ba0173e4ab8f6cbd4ec377254f5/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/c5ee12edebcb0f7c01c8ed24fc6bc7bd/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/dc06f4ff014fcbdc2a12c92d0d790ced/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:17:1-31:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12
+	package
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:2:5-28
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:7:5-77
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:7:22-75
+uses-sdk
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:9:5-11:41
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:9:5-11:41
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-cookies] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-cookies/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-cookies] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-cookies/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-config] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-config/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-config] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-config/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/fcd64f238f7679088d32256b686d2a2e/AndroidManifest.xml:8:5-10:41
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/fcd64f238f7679088d32256b686d2a2e/AndroidManifest.xml:8:5-10:41
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/11c56ca691a574cd987d69f6f43ad712/AndroidManifest.xml:7:5-9:41
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/11c56ca691a574cd987d69f6f43ad712/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:17:5-43
+MERGED from [com.github.ybq:Android-SpinKit:1.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/Android-SpinKit-1.1.0.aar/92a3c5707dcca21ca8a86f827d873341/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.ybq:Android-SpinKit:1.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/Android-SpinKit-1.1.0.aar/92a3c5707dcca21ca8a86f827d873341/AndroidManifest.xml:6:5-8:41
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/e138307a59eb7bda5a29322543e0a9cc/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/e138307a59eb7bda5a29322543e0a9cc/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/c59b301fa9d69c0fd0d6d6e2e9895a73/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/c59b301fa9d69c0fd0d6d6e2e9895a73/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/b5faa86515fdef2e1edefd669e90e19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/b5faa86515fdef2e1edefd669e90e19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/069d286b6fb3bf0a1777dda6a6365a25/AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/069d286b6fb3bf0a1777dda6a6365a25/AndroidManifest.xml:2:3-70
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.4.aar/3974772fa385b9463ff5481d330acdab/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.4.aar/3974772fa385b9463ff5481d330acdab/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/c412ba7908cacbc6dfe12000b08c9e24/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/c412ba7908cacbc6dfe12000b08c9e24/AndroidManifest.xml:20:5-43
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/0dfbbbaa09fb52c70ff02cf0a8dab9d8/AndroidManifest.xml:8:5-10:41
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/0dfbbbaa09fb52c70ff02cf0a8dab9d8/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/b5502b6116d8e369fd83a9099c83de13/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/b5502b6116d8e369fd83a9099c83de13/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/53a92ba0173e4ab8f6cbd4ec377254f5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/53a92ba0173e4ab8f6cbd4ec377254f5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/c5ee12edebcb0f7c01c8ed24fc6bc7bd/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/c5ee12edebcb0f7c01c8ed24fc6bc7bd/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/dc06f4ff014fcbdc2a12c92d0d790ced/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/dc06f4ff014fcbdc2a12c92d0d790ced/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:21:5-23:58
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:9:5-11:41
+INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:9:5-11:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:11:9-38
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:10:9-35
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml
+application
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:13:5-33:19
+MERGED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-14:19
+MERGED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-14:19
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-18:19
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-18:19
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.50.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/react-native-0.50.0.aar/c16ac336fb27a125587992d2cdcdfc8d/AndroidManifest.xml:13:5-20
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/fcd64f238f7679088d32256b686d2a2e/AndroidManifest.xml:12:5-20
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/fcd64f238f7679088d32256b686d2a2e/AndroidManifest.xml:12:5-20
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/11c56ca691a574cd987d69f6f43ad712/AndroidManifest.xml:11:5-20
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/11c56ca691a574cd987d69f6f43ad712/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:18:5-20:19
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/069d286b6fb3bf0a1777dda6a6365a25/AndroidManifest.xml:3:3-17
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/069d286b6fb3bf0a1777dda6a6365a25/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/17103cbf45fb14bb78a829fe8e012e54/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/17103cbf45fb14bb78a829fe8e012e54/AndroidManifest.xml:2:3-17
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.4.aar/3974772fa385b9463ff5481d330acdab/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.4.aar/3974772fa385b9463ff5481d330acdab/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:29:5-20
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/0dfbbbaa09fb52c70ff02cf0a8dab9d8/AndroidManifest.xml:12:5-20
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/0dfbbbaa09fb52c70ff02cf0a8dab9d8/AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from [:react-native-spinkit] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-spinkit/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:16:7-39
+	android:icon
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:17:7-41
+	android:allowBackup
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:15:7-33
+	android:theme
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:18:7-38
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:14:7-38
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:19:8-21:64
+	android:value
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:21:7-62
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:20:7-52
+activity#com.opentruck.MainActivity
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:22:7-31:18
+	android:label
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:24:9-41
+	android:windowSoftInputMode
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:26:9-51
+	android:configChanges
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:25:9-79
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:23:9-37
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:27:9-30:25
+action#android.intent.action.MAIN
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:28:13-65
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:28:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:29:13-73
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:29:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:32:7-84
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:9-17:40
+MERGED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:9-17:40
+	android:exported
+		ADDED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:32:17-81
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-maps/lib/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:10:22-78
+activity#com.reactnativenavigation.controllers.NavigationActivity
+ADDED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:9-14:86
+	android:configChanges
+		ADDED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:13-83
+	android:name
+		ADDED from [:react-native-navigation] /Volumes/work/learning/React_Learning/react-native/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:13-84
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/d39f3b4966287ee3960aaf85623f91d8/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/47a56868e09ec1df265f287d1c1906be/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/c412ba7908cacbc6dfe12000b08c9e24/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/c412ba7908cacbc6dfe12000b08c9e24/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/65c0a301dda1dfa5bb5cacc723016f0c/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/6cc8e743ca02c6a16df28c4389ac8b18/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/80656c4b8f2b794083142fe666e7938f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f49ffc9c14ee9898854c77d0b1b0a1d7/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/71052ad354c8a73241255bf76d6c5da4/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/f0b16acb1e408cc92e9d2904f38dba10/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/5083b9a4cbd9bc98cec20abb38c4ea47/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/AndroidManifest.xml:26:9-47
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:19:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.4.aar/a54c032e2a01eaa0c9bfe16288efe45f/AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/fb0981d1f35b5b050e2b2ca4f3b95438/AndroidManifest.xml:19:19-85
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Volumes/work/learning/React_Learning/react-native/opentruck/android/app/src/main/AndroidManifest.xml:1:1-35:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.4] /Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.4.aar/e0742f307cbb0c2a0f43786702031707/AndroidManifest.xml:20:20-65

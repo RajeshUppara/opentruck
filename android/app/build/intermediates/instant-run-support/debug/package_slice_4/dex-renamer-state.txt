@@ -1,0 +1,4 @@
+#Fri Jan 12 12:07:54 IST 2018
+base.0=/Volumes/work/learning/React_Learning/react-native/opentruck/android/app/build/intermediates/transforms/dexMerger/debug/4
+path.0=classes.dex
+renamed.0=classes.dex
