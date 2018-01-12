@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/work/learning/React_Learning/react-native/opentruck/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/res/values-v24/values-v24.xml",

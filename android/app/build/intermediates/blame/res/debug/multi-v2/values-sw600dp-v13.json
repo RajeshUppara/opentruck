@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/work/learning/React_Learning/react-native/opentruck/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/e54d8843a4496563dd0a5ad55e826348/res/values-sw600dp-v13/values-sw600dp-v13.xml",
