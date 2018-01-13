@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Text,
   Image,
@@ -9,12 +9,12 @@ import {
   Dimensions
 } from 'react-native';
 // import CookieManager from 'react-native-cookies';
-import {connect} from 'react-redux';
-import {palette, fonts} from '../../constants/styles';
+import { connect } from 'react-redux';
+import { palette, fonts } from '../../constants/styles';
 import * as userActions from '../../redux/user/actions';
 import PropTypes from 'prop-types';
 
-const {width} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export default class LoginUserComponent extends Component {
 
@@ -31,22 +31,42 @@ export default class LoginUserComponent extends Component {
 
   render() {
     return (
-      <View style={{flex: 1, position: 'relative', marginTop: 20}}>
-      <Text>This is the Login screen</Text>
-      <TouchableOpacity
-          style={[styles.button, {marginTop: 20, marginBottom: 20}]}
+      <View style={{ flex: 1, position: 'relative', marginTop: 20 }}>
+        <Image
+          source={require('../../assets/images/mainscreen.png')}
+          style={styles.image}
+        />
+        <View>
+        <Text>This is the Login screen</Text>
+        <TouchableOpacity
+          style={[styles.button, { marginTop: 20, marginBottom: 20 }]}
           onPress={() => this.Login()}
         >
-         <Text style={styles.button_text}>
+          <Text style={styles.button_text}>
             Sign In
           </Text>
         </TouchableOpacity>
-    </View>
+        </View>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width,
+    height: height,
+    opacity: 0.9,
+    backgroundColor: 'black'
+  },
   background_image: {
     flex: 1,
     height: null,
@@ -64,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop: 220,
     opacity: .95,
     padding: 20,
-    width: width > 600 ? width/1.8 : width - 20
+    width: width > 600 ? width / 1.8 : width - 20
   },
   logo_image: {
     alignSelf: 'center',
