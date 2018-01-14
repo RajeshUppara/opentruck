@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jan 14 12:25:49 IST 2018
+#Sun Jan 14 12:31:47 IST 2018
 4.path=fonts/Feather.ttf
 13.baseType=DIRECTORY
 8.set=ASSET

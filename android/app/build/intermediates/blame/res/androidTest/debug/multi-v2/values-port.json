@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

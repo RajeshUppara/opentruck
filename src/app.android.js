@@ -3,7 +3,7 @@
     on setting this up. This is very in line with React Native Navigations bootstrap.
 
 **/
-
+import React, {Component} from 'react';
 import { Dimensions } from 'react-native';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
@@ -15,6 +15,7 @@ import * as appActions from './redux/app/actions';
 
 import { Icon, fonts, palette, breakPointPercentage } from './constants/styles';
 import { navigatorButtons } from './constants/navigatorButtons';
+import SplashScreen from 'react-native-smart-splash-screen';
 
 
 const { width } = Dimensions.get('window');
@@ -28,14 +29,24 @@ import { registerScreens } from './containers';
 registerScreens(store, Provider);
 
 
-export default class App {
+export default class App extends Component {
 
-  constructor() {
+  constructor(props) {
+    super(props);
     store.subscribe(this.onStoreUpdate.bind(this));
     store.dispatch(appActions.appInitialized());
 
     //var homeIcon = <Icon icon="briefcase" width="40" height="40" color="#E7ECE9" />;
   }
+
+  componentDidMount () {
+    //SplashScreen.close(SplashScreen.animationType.scale, 850, 500)
+    SplashScreen.close({
+       animationType: SplashScreen.animationType.scale,
+       duration: 850,
+       delay: 500,
+    })
+}
 
   onStoreUpdate() {
     const { root } = store.getState().app;
