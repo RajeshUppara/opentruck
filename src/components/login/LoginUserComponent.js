@@ -31,15 +31,14 @@ export default class LoginUserComponent extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, position: 'relative', marginTop: 20 }}>
+      <View style={{ flex: 1}}>
         <Image
           source={require('../../assets/images/mainscreen.png')}
           style={styles.image}
         />
         <View>
-        <Text>This is the Login screen</Text>
         <TouchableOpacity
-          style={[styles.button, { marginTop: 20, marginBottom: 20 }]}
+          style={[styles.button, { marginTop: 200, marginBottom: 20 }]}
           onPress={() => this.Login()}
         >
           <Text style={styles.button_text}>
@@ -64,8 +63,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: width,
     height: height,
-    opacity: 0.9,
-    backgroundColor: 'black'
+    opacity: 0.1,
+    //backgroundColor: 'rgba(52, 52, 52, 0.8)'
+    //backgroundColor: 'transparent'
   },
   background_image: {
     flex: 1,

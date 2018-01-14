@@ -106,6 +106,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/splits-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
@@ -155,6 +156,7 @@
     <orderEntry type="module" module-name="react-native-cookies" />
     <orderEntry type="module" module-name="react-native-spinkit" />
     <orderEntry type="module" module-name="react-native-linear-gradient" />
+    <orderEntry type="module" module-name="react-native-smart-splash-screen" />
     <orderEntry type="module" module-name="react-native-maps" />
     <orderEntry type="module" module-name="react-native-vector-icons" />
     <orderEntry type="module" module-name="react-native-config" />

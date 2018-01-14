@@ -1944,6 +1944,10 @@
         "source": "/Users/rajeshuppara/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d34930419106a44350eabb1bff4ee0ce/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/res/merged/debug/drawable_launchscreen.png.flat",
+        "source": "/Volumes/work/projects/MyProjects/opentruck/android/app/src/main/res/drawable/launchscreen.png"
+    },
+    {
         "merged": "/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/res/merged/debug/menu_stub.xml.flat",
         "source": "/Volumes/work/projects/MyProjects/opentruck/node_modules/react-native-navigation/android/app/build/intermediates/bundles/debug/res/menu/stub.xml"
     },

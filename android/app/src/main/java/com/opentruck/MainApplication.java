@@ -5,6 +5,7 @@ import android.util.Log;
 import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.react.rnspinkit.RNSpinkitPackage;
@@ -34,6 +35,7 @@ public class MainApplication extends NavigationApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RCTSplashScreenPackage(),
             new MapsPackage(),
             new VectorIconsPackage(),
             new RNSpinkitPackage(),

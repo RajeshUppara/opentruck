@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 // import com.facebook.react.ReactActivity;
 import com.reactnativenavigation.controllers.SplashActivity;
+import com.reactnativecomponent.splashscreen.RCTSplashScreen;
 
 public class MainActivity extends SplashActivity {
 
@@ -35,12 +36,14 @@ public class MainActivity extends SplashActivity {
     //     return "movieapp";
     // }
 
-    // @Override
-    // public void onCreate (Bundle savedInstanceState) {
-    //     super.onCreate(savedInstanceState);
-    //     // Checking permissions on init
-    //     checkPerms();
-    // }
+    @Override
+    public void onCreate (Bundle savedInstanceState) {
+        RCTSplashScreen.openSplashScreen(this);   //open splashscreen
+        //RCTSplashScreen.openSplashScreen(this, true, ImageView.ScaleType.FIT_XY);   //open splashscreen fullscreen
+        super.onCreate(savedInstanceState);
+        // Checking permissions on init
+        //checkPerms();
+    }
 
 
     // public void checkPerms() {
