@@ -69,11 +69,10 @@ export default class App {
         Navigation.startTabBasedApp({
           tabs: [
             {
-              label: 'Admin',
-              screen: 'creddebApp.AdminScreen',
+              label: 'Consumers',
+              screen: 'creddebApp.ConsumersScreen',
               icon: require('./assets/images/home.png'),
-              title: 'Admin',
-              navigatorButtons: navigatorButtons.admin,
+              title: 'Consumers',
               navigatorStyle: {
                 navBarTextColor: 'white',
                 navBarTextFontSize: 18,
@@ -82,10 +81,11 @@ export default class App {
               }
             },
             {
-              label: 'Consumers',
-              screen: 'creddebApp.ConsumersScreen',
+              label: 'Admin',
+              screen: 'creddebApp.AdminScreen',
               icon: require('./assets/images/home.png'),
-              title: 'Consumers',
+              title: 'Admin',
+              navigatorButtons: navigatorButtons.admin,
               navigatorStyle: {
                 navBarTextColor: 'white',
                 navBarTextFontSize: 18,
@@ -127,7 +127,8 @@ export default class App {
             tabBarSelectedButtonColor: '#e03333',
             tabBarBackgroundColor: 'white',
             tabBarSelectedLabelColor: 'black',
-            tabBarTextFontFamily: 'Maven Pro'
+            tabBarTextFontFamily: 'Maven Pro',
+            initialTabIndex: 3
           },
           appStyle: {
             orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'

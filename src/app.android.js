@@ -138,7 +138,8 @@ export default class App extends Component {
             tabBarSelectedButtonColor: '#e03333',
             tabBarBackgroundColor: 'white',
             tabBarSelectedLabelColor: 'black',
-            tabBarTextFontFamily: 'Maven Pro'
+            tabBarTextFontFamily: 'Maven Pro',
+            initialTabIndex: 1
           },
           appStyle: {
             orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'
@@ -146,7 +147,8 @@ export default class App extends Component {
             bottomTabBadgeBackgroundColor: 'green', // Optional, change badge background color. Android only
             hideBackButtonTitle: false, // Hide back button title. Default is false. If `backButtonTitle` provided so it will take into account and the `backButtonTitle` value will show. iOS only,
             tabBarTranslucent: false,
-            forceTitlesDisplay: true
+            forceTitlesDisplay: true,
+            initialTabIndex: 1
           },
           animationType: 'none'
         });

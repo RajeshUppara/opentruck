@@ -15,11 +15,11 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
-const LATITUDE = 15.768896;
-const LONGITUDE = 77.482189;
-const LATITUDE_DELTA = 0.004849;
+const LATITUDE = 3.146642;
+const LONGITUDE = 101.695845;
+const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-//const LONGITUDE_DELTA = -0.000037;
+//const LONGITUDE_DELTA = 0.0421;
 const SPACE = 0.01;
 
 class DebitorsScreen extends Component {
@@ -35,29 +35,46 @@ class DebitorsScreen extends Component {
 
   constructor(props) {
     super(props);
-
+   
     this.state = {
       size: {
         width,
         height: width + 50
       },
-      latitude: LATITUDE,
-      longitude: LONGITUDE,
-      coordinate: new MapView.AnimatedRegion({
-        latitude: LATITUDE,
-        longitude: LONGITUDE,
-      }),
+      // latitude: LATITUDE,
+      // longitude: LONGITUDE,
+      region: {},
+      coordinate: {}
+
     };
+
+    // setTimeout(function () {
+    //   // this.setState({
+    //   //   latitude: 15.772551,
+    //   //   longitude: 77.482360
+    //   // });
+    //   this.animate();
+    // }.bind(this), 1000);
   }
 
-  componentWillMount() {
-    setTimeout(function () {
-      // this.setState({
-      //   latitude: 15.772551,
-      //   longitude: 77.482360
-      // });
-      this.animate();
-    }.bind(this), 1000);
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position);
+        this.setState({
+          region: {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+          },
+          coordinate: new MapView.AnimatedRegion({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          }),
+        });
+        
+      }
+    );
+    console.log("debitors2");
   }
 
   animate() {
@@ -73,21 +90,23 @@ class DebitorsScreen extends Component {
     return (
       <View style={{ flex: 1 }}>
         <View style={styles.container}>
+        {this.state.region.latitude &&
           <MapView
             provider={PROVIDER_GOOGLE}
             style={styles.map}
             initialRegion={{
-              latitude: this.state.latitude,
-              longitude: this.state.longitude,
+              latitude: this.state.region.latitude,
+              longitude: this.state.region.longitude,
               latitudeDelta: LATITUDE_DELTA,
               longitudeDelta: LONGITUDE_DELTA,
             }}
           >
             <MapView.Marker.Animated
-              coordinate={this.state.coordinate}
-              image={require('../../assets/images/movingtruck.png')}
+              coordinate={this.state.region}
+              image={require('../../assets/images/movingtruck1.png')}
             />
           </MapView>
+        }
         </View>
       </View>
     );
