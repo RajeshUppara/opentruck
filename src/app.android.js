@@ -76,15 +76,14 @@ export default class App extends Component {
           }
         });
         return;
-      case 'loggedIn':
+        case 'loggedIn':
         Navigation.startTabBasedApp({
           tabs: [
             {
-              label: 'Admin',
-              screen: 'creddebApp.AdminScreen',
+              label: 'Consumers',
+              screen: 'creddebApp.ConsumersScreen',
               icon: require('./assets/images/home.png'),
-              title: 'Admin',
-              navigatorButtons: navigatorButtons.admin,
+              title: 'Consumers',
               navigatorStyle: {
                 navBarTextColor: 'white',
                 navBarTextFontSize: 18,
@@ -93,10 +92,11 @@ export default class App extends Component {
               }
             },
             {
-              label: 'Consumers',
-              screen: 'creddebApp.ConsumersScreen',
+              label: 'Admin',
+              screen: 'creddebApp.AdminScreen',
               icon: require('./assets/images/home.png'),
-              title: 'Consumers',
+              title: 'Admin',
+              navigatorButtons: navigatorButtons.admin,
               navigatorStyle: {
                 navBarTextColor: 'white',
                 navBarTextFontSize: 18,
@@ -139,7 +139,7 @@ export default class App extends Component {
             tabBarBackgroundColor: 'white',
             tabBarSelectedLabelColor: 'black',
             tabBarTextFontFamily: 'Maven Pro',
-            initialTabIndex: 1
+            initialTabIndex: 3
           },
           appStyle: {
             orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'
@@ -147,8 +147,7 @@ export default class App extends Component {
             bottomTabBadgeBackgroundColor: 'green', // Optional, change badge background color. Android only
             hideBackButtonTitle: false, // Hide back button title. Default is false. If `backButtonTitle` provided so it will take into account and the `backButtonTitle` value will show. iOS only,
             tabBarTranslucent: false,
-            forceTitlesDisplay: true,
-            initialTabIndex: 1
+            forceTitlesDisplay: true
           },
           animationType: 'none'
         });
