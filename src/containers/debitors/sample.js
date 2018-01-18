@@ -134,3 +134,20 @@
   //     })
   //   });
   // }
+
+
+//   const style = {
+//     width: 50,
+//     height: 52,
+//     transform: [
+//       { rotate: `${this.props.heading}deg` }
+//     ]
+// }
+
+// <MapView.Marker
+//       key='aircraft-marker'
+//       anchor={{ x: 0.5, y: 0.5 }}
+//       zIndex={this.props.zIndex}
+//       coordinate={this.props.coordinate}>
+//         <Animated.Image ref='image' style={style} source={aircraftImg} />
+// </MapView.Marker>

@@ -10,7 +10,7 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, MAP_TYPES } from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 const IOS = Platform.OS === 'ios';
@@ -121,8 +121,32 @@ class DebitorsScreen extends Component {
         longitude: LONGITUDE - SPACE,
         duration: 3000
       }).start();
+
+
+      this.map.animateToRegion({
+        latitude: LATITUDE - (2 * SPACE),
+        longitude: LONGITUDE - SPACE,
+        latitudeDelta: 0.0175,
+        longitudeDelta: 0.0175,
+      }, 3000);
+     var max = 360;
+     var min = -360;
+      // this.map.animateToBearing({
+      //   return (Math.random() * (max - min)) + min
+      // });
+
     }.bind(this), 7000);
     //this.animate = this.animate.bind(this);
+  }
+
+  componentDidMount() {
+    this.map.animateToRegion({
+      latitude: LATITUDE - (2 * SPACE),
+      longitude: LONGITUDE - SPACE,
+      latitudeDelta: 0.0275,
+      longitudeDelta: 0.0275,
+    }, 3000);
+
   }
 
 
@@ -203,14 +227,17 @@ class DebitorsScreen extends Component {
         <View style={styles.container}>
           {this.state.region.latitude &&
             <MapView
-              provider={PROVIDER_GOOGLE}
+              ref={ref => { this.map = ref; }}
+              mapType={MAP_TYPES.TERRAIN}
+              //onLayout={() => this.map.animateToBearing(25)}
+              provider={MapView.PROVIDER_GOOGLE}
               style={styles.map}
-              showsCompass={true}
-              showsScale={true}
-              loadingEnabled
-              loadingIndicatorColor="#666666"
-              loadingBackgroundColor="#eeeeee"
-              showsBuildings={true}
+              // showsCompass={true}
+              // showsScale={true}
+              // loadingEnabled
+              // loadingIndicatorColor="#666666"
+              // loadingBackgroundColor="#eeeeee"
+              // showsBuildings
               initialRegion={{
                 latitude: this.state.region.latitude,
                 longitude: this.state.region.longitude,
@@ -218,6 +245,8 @@ class DebitorsScreen extends Component {
                 longitudeDelta: LONGITUDE_DELTA,
               }}
               customMapStyle={mapStyle}
+              showsUserLocation ={true} 
+              followsUserLocation = {true}
             >
               <MapView.Polyline
                 coordinates={polyline}
@@ -229,6 +258,8 @@ class DebitorsScreen extends Component {
               </MapView.Polyline>
               <MapView.Marker.Animated
                 coordinate={this.state.coordinate}
+                centerOffset={{ x: -18, y: -60 }}
+                anchor={{ x: 0.69, y: 1 }}
                 //image={imageUrl}
                 // style= {{
                 //   transform: [
