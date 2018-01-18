@@ -15,8 +15,11 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
-const LATITUDE = 3.146642;
-const LONGITUDE = 101.695845;
+// const LATITUDE = 3.146642;
+// const LONGITUDE = 101.695845;
+// const LATITUDE_DELTA = 0.08;
+const LATITUDE = 37.78825;
+const LONGITUDE = -122.4324;
 const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 //const LONGITUDE_DELTA = 0.0421;
@@ -35,7 +38,7 @@ class DebitorsScreen extends Component {
 
   constructor(props) {
     super(props);
-   
+
     this.state = {
       size: {
         width,
@@ -43,70 +46,190 @@ class DebitorsScreen extends Component {
       },
       // latitude: LATITUDE,
       // longitude: LONGITUDE,
-      region: {},
-      coordinate: {}
+      region: {
+        latitude: LATITUDE,
+        longitude: LONGITUDE,
+        latitudeDelta: LATITUDE_DELTA,
+        longitudeDelta: LONGITUDE_DELTA,
+      },
+      coordinate: new MapView.AnimatedRegion({
+        latitude: LATITUDE + SPACE,
+        longitude: LONGITUDE - SPACE,
+      }),
+      rotation: 150,
+      polyline: [
+        {
+          latitude: LATITUDE + SPACE,
+          longitude: LONGITUDE - SPACE,
+        },
+        {
+          latitude: LATITUDE - (2 * SPACE),
+          longitude: LONGITUDE + (2 * SPACE),
+        },
+        {
+          latitude: LATITUDE - SPACE,
+          longitude: LONGITUDE - SPACE,
+        },
+        {
+          latitude: LATITUDE - (2 * SPACE),
+          longitude: LONGITUDE - SPACE,
+        }
+      ],
+
 
     };
 
-    // setTimeout(function () {
-    //   // this.setState({
-    //   //   latitude: 15.772551,
-    //   //   longitude: 77.482360
-    //   // });
-    //   this.animate();
-    // }.bind(this), 1000);
+    setTimeout(function () {
+      this.state.coordinate.timing({
+        latitude: LATITUDE - (2 * SPACE),
+        longitude: LONGITUDE + (2 * SPACE),
+        duration: 3000
+      }).start();
+
+    }.bind(this), 1000);
+
+    
+    setTimeout(function () {
+      this.setState({
+        coordinate: new MapView.AnimatedRegion({
+          latitude: LATITUDE - (2 * SPACE),
+          longitude: LONGITUDE + (2 * SPACE),
+        }),
+        rotation: 300
+      });
+      
+      this.state.coordinate.timing({
+        latitude: LATITUDE - SPACE,
+        longitude: LONGITUDE - SPACE,
+        duration: 3000
+      }).start();
+    }.bind(this), 4000);
+
+    setTimeout(function () {
+      this.setState({
+        coordinate: new MapView.AnimatedRegion({
+          latitude: LATITUDE - SPACE,
+          longitude: LONGITUDE - SPACE,
+        }),
+        rotation: 186
+      });
+
+      this.state.coordinate.timing({
+        latitude: LATITUDE - (2 * SPACE),
+        longitude: LONGITUDE - SPACE,
+        duration: 3000
+      }).start();
+    }.bind(this), 7000);
+    //this.animate = this.animate.bind(this);
   }
 
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        console.log(position);
-        this.setState({
-          region: {
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude
-          },
-          coordinate: new MapView.AnimatedRegion({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          }),
-        });
-        
-      }
-    );
-    console.log("debitors2");
-  }
 
-  animate() {
-    const { coordinate } = this.state;
-    coordinate.timing({
-      latitude: 15.772551,
-      longitude: 77.482360,
-      duration: 10000
-    }).start();
-  }
+  // componentDidMount() {
+  //   navigator.geolocation.getCurrentPosition(
+  //     (position) => {
+  //       console.log(position);
+  //       this.setState({
+  //         region: {
+  //           latitude: LATITUDE - (2 * SPACE),
+  //           longitude: LONGITUDE - SPACE,
+  //         },
+  //         coordinate: {
+  //           latitude: LATITUDE + SPACE,
+  //           longitude: LONGITUDE - SPACE,
+  //         },
+  //       });
+
+  //       var polyLines = this.state.polyline;
+  //       setTimeout(function () {
+  //         this.setState({
+  //           coordinate: {
+  //             latitude: LATITUDE - (2 * SPACE),
+  //             longitude: LONGITUDE + (2 * SPACE),
+  //           },
+  //         });
+  //       }.bind(this), 2000);
+  //       setTimeout(function () {
+  //         this.setState({
+  //           coordinate: {
+  //             latitude: LATITUDE - SPACE,
+  //             longitude: LONGITUDE - SPACE,
+  //           },
+  //         });
+  //       }.bind(this), 500);
+
+  //       setTimeout(function () {
+  //         this.setState({
+  //           coordinate: {
+  //             latitude: LATITUDE - (2 * SPACE),
+  //             longitude: LONGITUDE - SPACE,
+  //           },
+  //         });
+  //       }.bind(this), 500);
+       
+
+  //     }
+  //   );
+  // }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log(nextState.coordinate.latitude);
+  //   //console.log(this.state.coordinate.latitude);
+  //   return false;
+  // }
+
+  // animate(region) {
+  //   //const { coordinate } = this.state;
+  //   this.state.coordinate.timing({
+  //     latitude: region.latitude,
+  //     longitude: region.longitude,
+  //     duration: 3000
+  //   }).start();
+
+  //   this.setState({
+  //     coordinate: new MapView.AnimatedRegion({
+  //       latitude: region.latitude,
+  //       longitude: region.latitude,
+  //     })
+  //   });
+  // }
 
   render() {
+    const { polyline } = this.state;
     return (
       <View style={{ flex: 1 }}>
         <View style={styles.container}>
-        {this.state.region.latitude &&
-          <MapView
-            provider={PROVIDER_GOOGLE}
-            style={styles.map}
-            initialRegion={{
-              latitude: this.state.region.latitude,
-              longitude: this.state.region.longitude,
-              latitudeDelta: LATITUDE_DELTA,
-              longitudeDelta: LONGITUDE_DELTA,
-            }}
-          >
-            <MapView.Marker.Animated
-              coordinate={this.state.region}
-              image={require('../../assets/images/movingtruck1.png')}
-            />
-          </MapView>
-        }
+          {this.state.region.latitude &&
+            <MapView
+              provider={PROVIDER_GOOGLE}
+              style={styles.map}
+              showsCompass={true}
+              showsScale={true}
+              loadingEnabled
+              loadingIndicatorColor="#666666"
+              loadingBackgroundColor="#eeeeee"
+              showsBuildings={true}
+              initialRegion={{
+                latitude: this.state.region.latitude,
+                longitude: this.state.region.longitude,
+                latitudeDelta: LATITUDE_DELTA,
+                longitudeDelta: LONGITUDE_DELTA,
+              }}
+            >
+              <MapView.Polyline
+                coordinates={polyline}
+                strokeColor="#000"
+                // strokeColor="rgba(0,0,200,0.5)"
+                strokeWidth={3}
+              >
+
+              </MapView.Polyline>
+              <MapView.Marker.Animated
+                coordinate={this.state.coordinate}
+                image={require('../../assets/images/movingtruck.png')}
+                rotation={this.state.rotation}
+              />
+            </MapView>
+          }
         </View>
       </View>
     );
