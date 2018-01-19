@@ -68,67 +68,68 @@ export default class App {
       case 'loggedIn':
         Navigation.startTabBasedApp({
           tabs: [
+            // {
+            //   label: 'Consumers',
+            //   screen: 'creddebApp.ConsumersScreen',
+            //   icon: require('./assets/images/home.png'),
+            //   title: 'Consumers',
+            //   navigatorStyle: {
+            //     navBarTextColor: 'white',
+            //     navBarTextFontSize: 18,
+            //     navBarTextFontFamily: 'Maven Pro',
+            //     navBarBackgroundColor: '#e03333'
+            //   }
+            // },
+            // {
+            //   label: 'Track',
+            //   screen: 'creddebApp.AdminScreen',
+            //   icon: require('./assets/images/home.png'),
+            //   title: 'TRUCKS',
+            //   //navigatorButtons: navigatorButtons.admin,
+            //   navigatorStyle: {
+            //     navBarTextColor: 'white',
+            //     navBarTextFontSize: 30,
+            //     navBarTextFontFamily: 'Maven Pro',
+            //     navBarBackgroundColor: 'rgba(66,141,144,1)'
+            //   }
+            // },
             {
-              label: 'Consumers',
-              screen: 'creddebApp.ConsumersScreen',
-              icon: require('./assets/images/home.png'),
-              title: 'Consumers',
-              navigatorStyle: {
-                navBarTextColor: 'white',
-                navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: '#e03333'
-              }
-            },
-            {
-              label: 'Admin',
-              screen: 'creddebApp.AdminScreen',
-              icon: require('./assets/images/home.png'),
-              title: 'Admin',
-              navigatorButtons: navigatorButtons.admin,
-              navigatorStyle: {
-                navBarTextColor: 'white',
-                navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: '#e03333'
-              }
-            },
-            {
-              label: 'Creditors',
+              label: 'Track',
               screen: 'creddebApp.CreditorsScreen',
-              icon: require('./assets/images/Creditors1.png'),
-              title: 'Creditors',
-              navigatorButtons: navigatorButtons.creditors,
+              icon: require('./assets/images/home.png'),
+              title: 'TRUCKS',
+              //navigatorButtons: navigatorButtons.creditors,
               navigatorStyle: {
                 navBarTextColor: 'white',
                 navBarTextFontSize: 18,
                 navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: '#e03333'
+                navBarBackgroundColor: 'rgba(66,141,144,1)'
               }
             },
             {
-              label: 'Debitors',
+              label: 'Maps',
               screen: 'creddebApp.DebitorsScreen',
               icon: require('./assets/images/Creditors2.png'),
-              title: 'Debitors',
+              title: 'MAPS',
               navigatorStyle: {
                 navBarTextColor: 'white',
-                navBarTextFontSize: 18,
+                navBarTextFontSize: 30,
                 navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: '#e03333'
+                navBarBackgroundColor: 'rgba(66,141,144,1)'
               }
             }
           ],
           passProps: {
+            tabIndex: "screenInstanceID7"
           },
           tabsStyle: {
             forceTitlesDisplay: true,
-            tabBarButtonColor: '514c4c',
-            tabBarSelectedButtonColor: '#e03333',
-            tabBarBackgroundColor: 'white',
+            tabBarButtonColor: '#514c4c',
+            tabBarSelectedButtonColor: 'rgba(66,141,144,1)',
+            tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
             tabBarTextFontFamily: 'Maven Pro',
-            initialTabIndex: 3
+            initialTabIndex: 0
           },
           appStyle: {
             orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'

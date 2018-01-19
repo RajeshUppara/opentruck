@@ -69,22 +69,23 @@ class AdminScreen extends Component {
   render() {
     //var jobIcon = <Icon icon="briefcase" width="40" height="40" color="#E7ECE9" />;
     return (
-      <View style={styles.container}>
-        <Text>This is the Admin screen</Text>
-        {/* <SpinlitLoader /> */}
-        <Spinner style={styles.spinner} isVisible={true} size={40} type='FadingCircleAlt' color='#423f3f'/>
-        {/* <LoadingIndicator /> */}
+      <View></View>
+      // <View style={styles.container}>
+      //   <Text>This is the Admin screen</Text>
+      //   {/* <SpinlitLoader /> */}
+      //   <Spinner style={styles.spinner} isVisible={true} size={40} type='FadingCircleAlt' color='#423f3f'/>
+      //   {/* <LoadingIndicator /> */}
 
-        {/* <Spinner
-          name="Wave"
-          color= '#070707'
-          size={37}
-          isVisible={true} /> */}
-        {/* <Icon icon="briefcase" width="40" height="40" color="#E7ECE9" /> */}
+      //   {/* <Spinner
+      //     name="Wave"
+      //     color= '#070707'
+      //     size={37}
+      //     isVisible={true} /> */}
+      //   {/* <Icon icon="briefcase" width="40" height="40" color="#E7ECE9" /> */}
 
-        {/* <SvgUri width="200" height="200" source={require('../../assets/home.svg')} /> */}
+      //   {/* <SvgUri width="200" height="200" source={require('../../assets/home.svg')} /> */}
 
-      </View>
+      // </View>
       
     );
   }

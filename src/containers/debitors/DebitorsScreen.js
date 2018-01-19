@@ -5,12 +5,15 @@ import {
   StyleSheet,
   Dimensions,
   Text,
-  View
+  View,
+  Alert
 } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import MapView, { PROVIDER_GOOGLE, MAP_TYPES } from 'react-native-maps';
+import {Navigation} from 'react-native-navigation';
+import MapViewDirections from 'react-native-maps-directions';
 
 const { width, height } = Dimensions.get('window');
 const IOS = Platform.OS === 'ios';
@@ -22,10 +25,13 @@ const ASPECT_RATIO = width / height;
 // const LATITUDE_DELTA = 0.08;
 const LATITUDE = 15.764199;
 const LONGITUDE = 77.475933;
-const LATITUDE_DELTA = 0.0922;
+const LATITUDE_DELTA = 0.4000;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 //const LONGITUDE_DELTA = 0.0421;
 const SPACE = 0.01;
+
+const origin = {latitude: 37.3318456, longitude: -122.0296002};
+const destination = {latitude: 37.771707, longitude: -122.4053769};
 
 class DebitorsScreen extends Component {
 
@@ -35,12 +41,13 @@ class DebitorsScreen extends Component {
   }
 
   static navigatorStyle = {
-    navBarTitleTextCentered: true
+    navBarTitleTextCentered: true,
+    navBarTextFontFamily: 'Maven Pro',
   }
 
   constructor(props) {
     super(props);
-
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     this.state = {
       size: {
         width,
@@ -75,6 +82,10 @@ class DebitorsScreen extends Component {
         {
           latitude: LATITUDE - (2 * SPACE),
           longitude: LONGITUDE - SPACE,
+        },
+        {
+          latitude: 15.941378,
+          longitude: 77.425732,
         }
       ],
 
@@ -121,13 +132,33 @@ class DebitorsScreen extends Component {
         longitude: LONGITUDE - SPACE,
         duration: 3000
       }).start();
+      // this.map.animateToBearing({
+      //   return (Math.random() * (max - min)) + min
+      // });
+
+    }.bind(this), 7000);
+
+    setTimeout(function () {
+      this.setState({
+        coordinate: new MapView.AnimatedRegion({
+          latitude: LATITUDE - SPACE,
+          longitude: LONGITUDE - SPACE,
+        }),
+        rotation: 186
+      });
+
+      this.state.coordinate.timing({
+        latitude: 15.941378,
+        longitude: 77.425732,
+        duration: 8000
+      }).start();
 
 
       this.map.animateToRegion({
-        latitude: LATITUDE - (2 * SPACE),
-        longitude: LONGITUDE - SPACE,
-        latitudeDelta: 0.0175,
-        longitudeDelta: 0.0175,
+        latitude: 15.941378,
+        longitude: 77.425732,
+        latitudeDelta: 0.0100,
+        longitudeDelta: LONGITUDE_DELTA,
       }, 3000);
      var max = 360;
      var min = -360;
@@ -135,17 +166,34 @@ class DebitorsScreen extends Component {
       //   return (Math.random() * (max - min)) + min
       // });
 
-    }.bind(this), 7000);
+    }.bind(this), 10000);
     //this.animate = this.animate.bind(this);
   }
 
+  onNavigatorEvent(event) {
+    if (event.id === 'bottomTabSelected') {
+      //this.props.tabIndex = "screenInstanceID7";
+    }
+    if (event.id === 'bottomTabReselected') {
+      //console.log('Tab reselected!');
+    }
+  }
+
+  async componentWillMount() {
+    const visibleScreenInstanceId = await Navigation.getCurrentlyVisibleScreenId();
+    console.log(visibleScreenInstanceId);
+   // Alert.alert(visibleScreenInstanceId);
+  }
+
   componentDidMount() {
+    if(this.props.tabIndex == 1) {
     this.map.animateToRegion({
       latitude: LATITUDE - (2 * SPACE),
       longitude: LONGITUDE - SPACE,
       latitudeDelta: 0.0275,
       longitudeDelta: 0.0275,
     }, 3000);
+  }
 
   }
 
@@ -223,12 +271,13 @@ class DebitorsScreen extends Component {
     const { polyline } = this.state;
     const imageUrl = IOS ? require('../../assets/images/movingtruck.png') : require('../../assets/images/movingtruck1.png')
     return (
+      //AIzaSyCYTxilXEV9e0ZtoBbv2tl29_f42Dldbgs
       <View style={{ flex: 1 }}>
         <View style={styles.container}>
-          {this.state.region.latitude &&
+          {this.state.region.latitude && this.props.tabIndex == "screenInstanceID7" &&
             <MapView
               ref={ref => { this.map = ref; }}
-              mapType={MAP_TYPES.TERRAIN}
+              // mapType={MAP_TYPES.TERRAIN}
               //onLayout={() => this.map.animateToBearing(25)}
               provider={MapView.PROVIDER_GOOGLE}
               style={styles.map}
@@ -248,6 +297,11 @@ class DebitorsScreen extends Component {
               showsUserLocation ={true} 
               followsUserLocation = {true}
             >
+            <MapViewDirections
+    origin={origin}
+    destination={destination}
+    apikey={"AIzaSyCYTxilXEV9e0ZtoBbv2tl29_f42Dldbgs"}
+  />
               <MapView.Polyline
                 coordinates={polyline}
                 strokeColor="#000"
