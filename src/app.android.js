@@ -95,31 +95,32 @@ export default class App {
             // },
             {
               label: 'Track',
-              screen: 'creddebApp.CreditorsScreen',
+              screen: 'creddebApp.TrucksScreen',
               icon: require('./assets/images/home.png'),
               title: 'TRUCKS',
               //navigatorButtons: navigatorButtons.creditors,
               navigatorStyle: {
                 navBarTextColor: 'white',
-                navBarTextFontSize: 22,
+                navBarTextFontSize: 18,
                 navBarTextFontFamily: 'Maven Pro',
                 navBarBackgroundColor: 'rgba(66,141,144,1)'
               }
             },
             {
               label: 'Maps',
-              screen: 'creddebApp.DebitorsScreen',
+              screen: 'creddebApp.MapsScreen',
               icon: require('./assets/images/Creditors2.png'),
-              title: 'Maps',
+              title: 'MAPS',
               navigatorStyle: {
                 navBarTextColor: 'white',
-                navBarTextFontSize: 22,
+                navBarTextFontSize: 30,
                 navBarTextFontFamily: 'Maven Pro',
                 navBarBackgroundColor: 'rgba(66,141,144,1)'
               }
             }
           ],
           passProps: {
+            tabIndex: "screenInstanceID7"
           },
           tabsStyle: {
             forceTitlesDisplay: true,
@@ -128,7 +129,7 @@ export default class App {
             tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
             tabBarTextFontFamily: 'Maven Pro',
-            initialTabIndex: 1
+            initialTabIndex: 0
           },
           appStyle: {
             orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'

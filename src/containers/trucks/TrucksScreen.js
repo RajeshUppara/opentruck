@@ -14,11 +14,11 @@ import PropTypes from 'prop-types';
 import { navigatorButtons } from '../../constants/navigatorButtons';
 import {Navigation} from 'react-native-navigation';
 
-import CreditorsListComponent from '../../components/creditor/CreditorsListComponent';
+import TrucksListComponent from '../../components/truck/TrucksListComponent';
 
 const { width } = Dimensions.get('window');
 
-class CreditorsScreen extends Component {
+class TrucksScreen extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -66,7 +66,7 @@ class CreditorsScreen extends Component {
     if (event.type == 'NavBarButtonPress') { // this is the event type for button presses
       if (event.id == 'creditorsearch') { // this is the same id field from the static navigatorButtons definition
         this.props.navigator.showModal({
-          screen: 'creddebApp.CreditorsSearchScreen', // unique ID registered with Navigation.registerScreen
+          screen: 'creddebApp.TrucksSearchScreen', // unique ID registered with Navigation.registerScreen
           navigatorButtons: {leftButtons: [
             {
               title: "Cancel",
@@ -94,7 +94,7 @@ class CreditorsScreen extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <CreditorsListComponent
+        <TrucksListComponent
           navigator={this.props.navigator} />
       </View>
     );
@@ -107,4 +107,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(CreditorsScreen);
+export default connect(mapStateToProps)(TrucksScreen);

@@ -95,7 +95,7 @@ export default class App {
             // },
             {
               label: 'Track',
-              screen: 'creddebApp.CreditorsScreen',
+              screen: 'creddebApp.TrucksScreen',
               icon: require('./assets/images/home.png'),
               title: 'TRUCKS',
               //navigatorButtons: navigatorButtons.creditors,
@@ -108,7 +108,7 @@ export default class App {
             },
             {
               label: 'Maps',
-              screen: 'creddebApp.DebitorsScreen',
+              screen: 'creddebApp.MapsScreen',
               icon: require('./assets/images/Creditors2.png'),
               title: 'MAPS',
               navigatorStyle: {

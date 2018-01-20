@@ -14,12 +14,12 @@ import {
 import { connect } from 'react-redux';
 import { palette, fonts } from '../../constants/styles';
 import * as userActions from '../../redux/user/actions';
-import CreditorsListView from './CreditorsListView';
+import TrucksListView from './TrucksListView';
 import PropTypes from 'prop-types';
 
 const { width } = Dimensions.get('window');
 
-export default class CreditorsListComponent extends Component {
+export default class TrucksListComponent extends Component {
 
   static propTypes = {
   }
@@ -33,14 +33,14 @@ export default class CreditorsListComponent extends Component {
   }
 
   render() {
-    let creditorslist = <CreditorsListView 
+    let creditorslist = <TrucksListView 
     navigator={this.props.navigator}/>;
 
     return (
       <View style={{flex: 1}}>
         <ScrollView contentContainerStyle={{flexGrow:1}} scrollEnabled>
           {
-            <View style={{flex: 1}}>
+            <View>
               {
                 creditorslist
               }

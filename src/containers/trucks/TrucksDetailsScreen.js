@@ -11,11 +11,11 @@ import {
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
-import CreditorsListComponent from '../../components/creditor/CreditorsListComponent';
+import TrucksListComponent from '../../components/truck/TrucksListComponent';
 
 const { width } = Dimensions.get('window');
 
-class CreditorDetailsScreen extends Component {
+class TruckDetailsScreen extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -45,7 +45,7 @@ class CreditorDetailsScreen extends Component {
     
     return (
       <View style={{flex: 1}}>
-        <Text>This is creditor details screen</Text>
+        <Text>This is Truck details screen</Text>
       </View>
     );
   }
@@ -57,4 +57,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(CreditorDetailsScreen);
+export default connect(mapStateToProps)(TruckDetailsScreen);

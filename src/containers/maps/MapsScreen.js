@@ -33,7 +33,7 @@ const SPACE = 0.01;
 const origin = {latitude: 37.3318456, longitude: -122.0296002};
 const destination = {latitude: 37.771707, longitude: -122.4053769};
 
-class DebitorsScreen extends Component {
+class MapsScreen extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -297,11 +297,11 @@ class DebitorsScreen extends Component {
               showsUserLocation ={true} 
               followsUserLocation = {true}
             >
-            <MapViewDirections
+            {/* <MapViewDirections
     origin={origin}
     destination={destination}
     apikey={"AIzaSyCYTxilXEV9e0ZtoBbv2tl29_f42Dldbgs"}
-  />
+  /> */}
               <MapView.Polyline
                 coordinates={polyline}
                 strokeColor="#000"
@@ -508,4 +508,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(DebitorsScreen);
+export default connect(mapStateToProps)(MapsScreen);

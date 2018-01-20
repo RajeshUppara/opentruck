@@ -12,12 +12,12 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import CreditorsListComponent from '../../components/creditor/CreditorsListComponent';
+import CreditorsListComponent from '../../components/truck/TrucksListComponent';
 import { palette } from '../../constants/styles';
 
 const { width } = Dimensions.get('window');
 
-class CreditorsSearchScreen extends Component {
+class TrucksSearchScreen extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -76,4 +76,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(CreditorsSearchScreen);
+export default connect(mapStateToProps)(TrucksSearchScreen);
