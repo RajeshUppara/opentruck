@@ -4,7 +4,7 @@
 
 **/
 
-import { Dimensions } from 'react-native';
+import { Dimensions, Alert } from 'react-native';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { Navigation } from 'react-native-navigation';
@@ -100,10 +100,12 @@ export default class App {
               title: 'TRUCKS',
               //navigatorButtons: navigatorButtons.creditors,
               navigatorStyle: {
-                navBarTextColor: 'white',
+               // navBarTextColor: 'black',
                 navBarTextFontSize: 18,
                 navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: 'rgba(66,141,144,1)'
+                navBarBackgroundColor: 'rgba(66,141,144,1)',
+                navBarHeight: 55,
+                navBarButtonColor: 'black'
               }
             },
             {
@@ -113,9 +115,10 @@ export default class App {
               title: 'MAPS',
               navigatorStyle: {
                 navBarTextColor: 'white',
-                navBarTextFontSize: 30,
+                navBarTextFontSize: 18,
                 navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: 'rgba(66,141,144,1)'
+                navBarBackgroundColor: 'rgba(66,141,144,1)',
+                navBarHeight: 55
               }
             }
           ],
@@ -129,15 +132,36 @@ export default class App {
             tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
             tabBarTextFontFamily: 'Maven Pro',
-            initialTabIndex: 0
+            initialTabIndex: 0,
+            bottomTabBadgeTextColor: 'white', // Optional, change badge text color. Android only
+            bottomTabBadgeBackgroundColor: '#c12222', // Optional, change badge background color. Android only
           },
           appStyle: {
-            orientation: 'portrait', // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'
-            bottomTabBadgeTextColor: 'red', // Optional, change badge text color. Android only
-            bottomTabBadgeBackgroundColor: 'green', // Optional, change badge background color. Android only
+            // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'
+            bottomTabBadgeTextColor: 'white', // Optional, change badge text color. Android only
+            bottomTabBadgeBackgroundColor: '#c12222', // Optional, change badge background color. Android only
             hideBackButtonTitle: false, // Hide back button title. Default is false. If `backButtonTitle` provided so it will take into account and the `backButtonTitle` value will show. iOS only,
             tabBarTranslucent: false,
-            forceTitlesDisplay: true
+            forceTitlesDisplay: true,
+            tabBarButtonColor: '#514c4c',
+            tabBarSelectedButtonColor: 'rgba(66,141,144,1)',
+            tabBarBackgroundColor: 'rgb(244, 245, 247)',
+            tabBarSelectedLabelColor: 'black',
+          },
+          drawer: { // optional, add this if you want a side menu drawer in your app
+            left: { // optional, define if you want a drawer from the left
+              screen: 'creddebApp.TruckSearchIconComponent', // unique ID registered with Navigation.registerScreen
+              passProps: {}, // simple serializable object that will pass as props to all top screens (optional),
+              fixedWidth: width < 400 ? 800 : 1200// a fixed width you want your left drawer to have (optional)
+            },
+            style: { // ( iOS only )
+              drawerShadow: true, // optional, add this if you want a side menu drawer shadow
+              contentOverlayColor: 'rgba(0,0,0,0.25)', // optional, add this if you want a overlay color when drawer is open
+              leftDrawerWidth: 50, // optional, add this if you want a define left drawer width (50=percent)
+              rightDrawerWidth: 50, // optional, add this if you want a define right drawer width (50=percent)
+              shouldStretchDrawer: true // optional, iOS only with 'MMDrawer' type, whether or not the panning gesture will “hard-stop” at the maximum width for a given drawer side, default : true
+            },
+            // disableOpenGesture: false // optional, can the drawer be opened with a swipe instead of button
           },
           animationType: 'none'
         });

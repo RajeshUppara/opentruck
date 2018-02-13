@@ -34,125 +34,75 @@ export default class TrucksListView extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: 'white' }}>
         <View>
-          <TouchableOpacity
-            onPress={() => {
-              this.props.navigator.push({
-                screen: 'creddebApp.TruckDetailsScreen', // unique ID registered with Navigation.registerScreen
-                title: "TruckDetails", // navigation bar title of the pushed screen (optional)
-              })
-            }
-            }>
-            <View style={[styles.list_info_area]}>
-              <View style={styles.main_view}>
-                <View style={{  width: '35%', flexDirection: 'row', marginLeft: width > 350 ? 0 : 30, }}>
+          <View style={[styles.list_info_area]}>
+            <View style={styles.main_view}>
+              <View style={{ width: '35%', flexDirection: 'row', marginLeft: width > 350 ? 0 : 30 }}>
                 <Avatar
-                    small
-                    rounded
-                    source={require('../../assets/images/avatar-truck.png') }
-                    onPress={() => console.log("Works!")}
-                    activeOpacity={0.7}
-                    avatarStyle={{borderRadius:8, height:70, width:70, borderColor: 'red' }}
-                    containerStyle={{borderColor: "red"}}
-                  />
-                
+                  small
+                  rounded
+                  source={require('../../assets/images/avatar-truck.png')}
+                  width={40}
+                  height={40}
+                  //containerStyle={{ backgroundColor: 'black' }}
+                  activeOpacity={0.7}
+                />
+
                 <View style={styles.inner_text_container}>
                   <Text style={[styles.Upper_text, { fontFamily: 'Maven Pro', fontWeight: '600', color: '#5d798d' }]}>AP 31 BA 1234</Text>
                 </View>
-                </View>
-                <View style={styles.distance_view}>
-                  <View style={[styles.distance_text, {position: 'relative', left: width > 350 ? 60 : 40}]}>
-                    {/* <Text style={{ fontSize: 13, color: palette.gray.text }}>Total Amount : </Text> */}
-                    {/* <Text style={{ fontSize: 13, color: palette.black.base }}>350 Km</Text> */}
-                    <View style={{marginRight: 0}}>
+              </View>
+              <View style={styles.distance_view}>
+                <View style={[styles.distance_text, { position: 'relative', left: width > 350 ? 60 : 40 }]}>
+                  {/* <Text style={{ fontSize: 13, color: palette.gray.text }}>Total Amount : </Text> */}
+                  {/* <Text style={{ fontSize: 13, color: palette.black.base }}>350 Km</Text> */}
+                  <View style={{ marginRight: 0 }}>
                     <Icon
                       name='map-marker'
                       type='font-awesome'
                       color='#c12222'
+                      size={32}
                     />
-                    </View>
-                    <Text style={{ fontSize: 11, color: palette.black.base, textAlign: 'center' }}>350 Km</Text>
                   </View>
-                  <View style={[styles.distance_text, {position: 'relative', left: 40, marginRight: 20}]}>
+                  <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center' }}>350 Km</Text>
+                </View>
+
+                <View style={[styles.distance_text, { position: 'relative', left: 40, marginRight: 20 }]}>
+
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.props.navigator.push({
+                        screen: 'creddebApp.TruckDetailsScreen', // unique ID registered with Navigation.registerScreen
+                        title: "AP 31 BA 1234", // navigation bar title of the pushed screen (optional)
+                        // does the push have transition animation or does it happen immediately (optional)
+                        animationType: 'slide-horizontal', // 'fade' (for both) / 'slide-horizontal' (for android) does the push have different transition animation (optional)
+                        backButtonTitle: undefined,
+                        backButtonHidden: false
+                      })
+                    }
+                    }>
                     <Icon
                       name='history'
                       type='font-awesome'
                       color='#efd723'
+                      size={32}
                     />
-                    <Text style={{ fontSize: 11, color: palette.black.base, textAlign: 'center' }}>History</Text>
-                  </View>
-                  </View>
-                  <View style={{ marginLeft: 4 }}></View>
-                
-              </View>
 
+                    <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center' }}>History</Text>
+                  </TouchableOpacity>
+
+
+                </View>
+              </View>
+              <View style={{ marginLeft: 4 }}></View>
 
             </View>
-          </TouchableOpacity>
+
+
+          </View>
           <Divider style={{ backgroundColor: palette.gray.light, width: '95%', marginLeft: 10 }} />
         </View>
-
-        <View>
-          <TouchableOpacity
-            onPress={() => {
-              this.props.navigator.push({
-                screen: 'creddebApp.TruckDetailsScreen', // unique ID registered with Navigation.registerScreen
-                title: "TruckDetails", // navigation bar title of the pushed screen (optional)
-              })
-            }
-            }>
-            <View style={[styles.list_info_area]}>
-              <View style={styles.main_view}>
-                <View style={{  width: '35%', flexDirection: 'row', marginLeft: width > 350 ? 0 : 30, }}>
-                <Avatar
-                    small
-                    rounded
-                    source={require('../../assets/images/avatar-truck.png') }
-                    onPress={() => console.log("Works!")}
-                    activeOpacity={0.7}
-                    avatarStyle={{borderRadius:8, height:50, width:50, borderColor: 'red' }}
-                    containerStyle={{borderColor: "red"}}
-                  />
-                
-                <View style={styles.inner_text_container}>
-                  <Text style={[styles.Upper_text, { fontFamily: 'Maven Pro', fontWeight: '600', color: '#5d798d' }]}>AP 31 BA 1234</Text>
-                </View>
-                </View>
-                <View style={styles.distance_view}>
-                  <View style={[styles.distance_text, {position: 'relative', left: width > 350 ? 60 : 40}]}>
-                    {/* <Text style={{ fontSize: 13, color: palette.gray.text }}>Total Amount : </Text> */}
-                    {/* <Text style={{ fontSize: 13, color: palette.black.base }}>350 Km</Text> */}
-                    <View style={{marginRight: 0}}>
-                    <Icon
-                      name='map-marker'
-                      type='font-awesome'
-                      color='#c12222'
-                    />
-                    </View>
-                    <Text style={{ fontSize: 11, color: palette.black.base, textAlign: 'center' }}>350 Km</Text>
-                  </View>
-                  <View style={[styles.distance_text, {position: 'relative', left: 40, marginRight: 20}]}>
-                    <Icon
-                      name='history'
-                      type='font-awesome'
-                      color='#efd723'
-                    />
-                    <Text style={{ fontSize: 11, color: palette.black.base, textAlign: 'center' }}>History</Text>
-                  </View>
-                  </View>
-                  <View style={{ marginLeft: 4 }}></View>
-                
-              </View>
-
-
-            </View>
-          </TouchableOpacity>
-          <Divider style={{ backgroundColor: palette.gray.light, width: '95%', marginLeft: 10 }} />
-        </View>
-
- 
-
       </View>
     );
   }
@@ -164,7 +114,7 @@ const styles = StyleSheet.create({
     // borderColor: palette.black.base,
     //marginRight: 5,
     marginLeft: width > 350 ? 12 : -18,
-    marginTop: 8,
+    marginTop: 60,
     backgroundColor: 'white',
     // shadowColor: 'black',
     // shadowOffset: { width: 0, height: 1 },
@@ -199,7 +149,7 @@ const styles = StyleSheet.create({
   },
   Upper_text: {
     bottom: 10,
-    fontSize: 16,
+    fontSize: 14,
     marginTop: 8,
     color: '#454547'
   },
@@ -211,7 +161,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     flex: 1,
     flexDirection: 'row',
-    // marginRight: 20,
+    marginRight: width > 350 ? 0 : 10,
     //width: '20%',
     // marginTop: 12,
     marginLeft: 30

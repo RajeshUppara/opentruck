@@ -12,8 +12,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import MapView, { PROVIDER_GOOGLE, MAP_TYPES } from 'react-native-maps';
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 import MapViewDirections from 'react-native-maps-directions';
+import Polyline from '@mapbox/polyline';
 
 const { width, height } = Dimensions.get('window');
 const IOS = Platform.OS === 'ios';
@@ -25,13 +26,13 @@ const ASPECT_RATIO = width / height;
 // const LATITUDE_DELTA = 0.08;
 const LATITUDE = 15.764199;
 const LONGITUDE = 77.475933;
-const LATITUDE_DELTA = 0.4000;
-const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-//const LONGITUDE_DELTA = 0.0421;
+const LATITUDE_DELTA = 0.3938158798959961;
+//const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+const LONGITUDE_DELTA = 0.6100520119070865;
 const SPACE = 0.01;
 
-const origin = {latitude: 37.3318456, longitude: -122.0296002};
-const destination = {latitude: 37.771707, longitude: -122.4053769};
+const origin = { latitude: 37.3318456, longitude: -122.0296002 };
+const destination = { latitude: 37.771707, longitude: -122.4053769 };
 
 class MapsScreen extends Component {
 
@@ -43,10 +44,15 @@ class MapsScreen extends Component {
   static navigatorStyle = {
     navBarTitleTextCentered: true,
     navBarTextFontFamily: 'Maven Pro',
+    //navBarTranslucent: true,
+    drawUnderNavBar: true,
+    navBarTextColor: '#000000',
+    statusBarTextColorScheme: 'dark'
   }
 
   constructor(props) {
     super(props);
+
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     this.state = {
       size: {
@@ -88,6 +94,349 @@ class MapsScreen extends Component {
           longitude: 77.425732,
         }
       ],
+      mapStyle: [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#00ee26"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "on"
+            },
+            {
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "color": "#757575"
+            },
+            {
+              "visibility": "simplified"
+            },
+            {
+              "weight": 7
+            }
+          ]
+        },
+        {
+          "featureType": "poi.government",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#38287a"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ff9500"
+            },
+            {
+              "visibility": "simplified"
+            },
+            {
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#00ee26"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "saturation": 85
+            },
+            {
+              "visibility": "on"
+            },
+            {
+              "weight": 5
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "color": "#fc6509"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#eaea00"
+            },
+            {
+              "saturation": 95
+            },
+            {
+              "visibility": "off"
+            },
+            {
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "saturation": 100
+            },
+            {
+              "visibility": "on"
+            },
+            {
+              "weight": 4.5
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "color": "#3d7727"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ],
 
 
     };
@@ -101,7 +450,7 @@ class MapsScreen extends Component {
 
     }.bind(this), 1000);
 
-    
+
     setTimeout(function () {
       this.setState({
         coordinate: new MapView.AnimatedRegion({
@@ -110,7 +459,7 @@ class MapsScreen extends Component {
         }),
         rotation: 300
       });
-      
+
       this.state.coordinate.timing({
         latitude: LATITUDE - SPACE,
         longitude: LONGITUDE - SPACE,
@@ -160,8 +509,8 @@ class MapsScreen extends Component {
         latitudeDelta: 0.0100,
         longitudeDelta: LONGITUDE_DELTA,
       }, 3000);
-     var max = 360;
-     var min = -360;
+      var max = 360;
+      var min = -360;
       // this.map.animateToBearing({
       //   return (Math.random() * (max - min)) + min
       // });
@@ -182,18 +531,32 @@ class MapsScreen extends Component {
   async componentWillMount() {
     const visibleScreenInstanceId = await Navigation.getCurrentlyVisibleScreenId();
     console.log(visibleScreenInstanceId);
-   // Alert.alert(visibleScreenInstanceId);
+    //Alert.alert("efgr");
+    // Alert.alert(visibleScreenInstanceId);
   }
 
-  componentDidMount() {
-    if(this.props.tabIndex == 1) {
-    this.map.animateToRegion({
-      latitude: LATITUDE - (2 * SPACE),
-      longitude: LONGITUDE - SPACE,
-      latitudeDelta: 0.0275,
-      longitudeDelta: 0.0275,
-    }, 3000);
-  }
+  async componentDidMount() {
+
+    // let resp = await fetch("https://maps.googleapis.com/maps/api/directions/json?origin=17.397635,78.375823&destination=17.434390,78.386753&key=AIzaSyAfh3b2zx-_rBD3DeQpD0bnYgbkS6nT2a0")
+    // let respJson = await resp.json();
+    // let points = Polyline.decode(respJson.routes[0].overview_polyline.points);
+    // let coords = points.map((point, index) => {
+    //   return {
+    //     latitude: point[0],
+    //     longitude: point[1]
+    //   }
+    // })
+    // this.setState({ polyline: coords })
+
+
+    // if (this.props.tabIndex == 1) {
+    //   this.map.animateToRegion({
+    //     latitude: LATITUDE - (2 * SPACE),
+    //     longitude: LONGITUDE - SPACE,
+    //     latitudeDelta: 0.0275,
+    //     longitudeDelta: 0.0275,
+    //   }, 3000);
+    // }
 
   }
 
@@ -239,7 +602,7 @@ class MapsScreen extends Component {
   //           },
   //         });
   //       }.bind(this), 500);
-       
+
 
   //     }
   //   );
@@ -267,14 +630,16 @@ class MapsScreen extends Component {
   //   });
   // }
 
+  
+
   render() {
     const { polyline } = this.state;
-    const imageUrl = IOS ? require('../../assets/images/movingtruck.png') : require('../../assets/images/movingtruck1.png')
+    const imageUrl = IOS ? require('../../assets/images/movingtruck.png') : require('../../assets/images/movingtruck.png')
     return (
       //AIzaSyCYTxilXEV9e0ZtoBbv2tl29_f42Dldbgs
       <View style={{ flex: 1 }}>
         <View style={styles.container}>
-          {this.state.region.latitude && this.props.tabIndex == "screenInstanceID7" &&
+          {this.state.region.latitude &&
             <MapView
               ref={ref => { this.map = ref; }}
               // mapType={MAP_TYPES.TERRAIN}
@@ -288,16 +653,16 @@ class MapsScreen extends Component {
               // loadingBackgroundColor="#eeeeee"
               // showsBuildings
               initialRegion={{
-                latitude: this.state.region.latitude,
-                longitude: this.state.region.longitude,
+                latitude: 17.397635,
+                longitude: 78.375823,
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
               }}
-              customMapStyle={mapStyle}
-              showsUserLocation ={true} 
-              followsUserLocation = {true}
+              customMapStyle={this.state.mapStyle}
+              showsUserLocation={true}
+              followsUserLocation={true}
             >
-            {/* <MapViewDirections
+              {/* <MapViewDirections
     origin={origin}
     destination={destination}
     apikey={"AIzaSyCYTxilXEV9e0ZtoBbv2tl29_f42Dldbgs"}
@@ -314,12 +679,12 @@ class MapsScreen extends Component {
                 coordinate={this.state.coordinate}
                 centerOffset={{ x: -18, y: -60 }}
                 anchor={{ x: 0.69, y: 1 }}
-                //image={imageUrl}
-                // style= {{
-                //   transform: [
-                //     { rotate: `${this.state.rotation}deg` }
-                //   ]
-                // }}
+              // image={imageUrl}
+              // style= {{
+              //   transform: [
+              //     { rotate: `${this.state.rotation}deg` }
+              //   ]
+              // }}
               />
             </MapView>
           }
@@ -328,167 +693,8 @@ class MapsScreen extends Component {
     );
 
 
-const mapStyle = [
-  {
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#bdbdbd"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#dadada"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.line",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
-  },
-  {
-    "featureType": "transit.station",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#c9c9c9"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
+
   }
-]
-}
 }
 
 const styles = StyleSheet.create({

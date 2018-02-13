@@ -44,7 +44,7 @@ class TruckDetailsScreen extends Component {
   render() {
     
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: 'white'}}>
         <Text>This is Truck details screen</Text>
       </View>
     );

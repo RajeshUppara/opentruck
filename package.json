@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android-package": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res"
   },
   "peerDependencies": {
     "react": "^16.2.0"
   },
   "dependencies": {
+    "@mapbox/polyline": "^0.2.0",
     "axios": "^0.17.1",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
