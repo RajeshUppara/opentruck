@@ -16,11 +16,11 @@ import PropTypes from 'prop-types';
 
 import {palette, fonts} from '../../constants/styles';
 import * as appActions from '../../redux/app/actions';
-import LoginUserComponent from '../../components/login/LoginUserComponent';
+import ForgotPasswordComponent from '../../components/login/ForgotPasswordComponent';
 
 const { width } = Dimensions.get('window');
 
-class LoginScreen extends Component {
+class ForgotPasswordScreen extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -50,10 +50,9 @@ class LoginScreen extends Component {
   render() {
     
     return (
-      <LoginUserComponent 
+      <ForgotPasswordComponent 
         dispatch = {this.props.dispatch} 
         Login = {this.props.Login}
-        ForgotPassword = {this.props.ForgotPassword}
         navigator= {this.props.navigator}
         />
     );
@@ -62,10 +61,6 @@ class LoginScreen extends Component {
 
 function Login(dispatch) {
   dispatch(appActions.changeAppRoot('loggedIn'));
-}
-
-function ForgotPassword(dispatch) {
-
 }
 
 function mapStateToProps(state) {
@@ -77,9 +72,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    Login,
-    ForgotPassword
+    Login
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(ForgotPasswordScreen);

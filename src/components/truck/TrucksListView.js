@@ -50,7 +50,7 @@ export default class TrucksListView extends Component {
                 />
 
                 <View style={styles.inner_text_container}>
-                  <Text style={[styles.Upper_text, { fontFamily: 'Maven Pro', fontWeight: '600', color: '#5d798d' }]}>AP 31 BA 1234</Text>
+                  <Text style={[styles.Upper_text, { fontFamily: 'MavenPro-Medium', fontWeight: '600', color: '#5d798d' }]}>AP 31 BA 1234</Text>
                 </View>
               </View>
               <View style={styles.distance_view}>
@@ -65,7 +65,7 @@ export default class TrucksListView extends Component {
                       size={32}
                     />
                   </View>
-                  <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center' }}>350 Km</Text>
+                  <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center', fontFamily:'MavenPro-Medium' }}>350 Km</Text>
                 </View>
 
                 <View style={[styles.distance_text, { position: 'relative', left: 40, marginRight: 20 }]}>
@@ -89,7 +89,7 @@ export default class TrucksListView extends Component {
                       size={32}
                     />
 
-                    <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center' }}>History</Text>
+                    <Text style={{ fontSize: 12, color: "#5d798d", textAlign: 'center', fontFamily: 'MavenPro-Medium' }}>History</Text>
                   </TouchableOpacity>
 
 

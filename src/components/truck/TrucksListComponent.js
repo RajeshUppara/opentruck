@@ -17,7 +17,7 @@ import * as userActions from '../../redux/user/actions';
 import TrucksListView from './TrucksListView';
 import PropTypes from 'prop-types';
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export default class TrucksListComponent extends Component {
 
@@ -33,12 +33,16 @@ export default class TrucksListComponent extends Component {
   }
 
   render() {
-    let creditorslist = <TrucksListView 
-    navigator={this.props.navigator}/>;
+    let creditorslist = <TrucksListView
+      navigator={this.props.navigator} />;
 
     return (
-      <View style={{flex: 1}}>
-        <ScrollView contentContainerStyle={{flexGrow:1}} scrollEnabled>
+      <View style={{ flex: 1 }}>
+        <Image
+          source={require('../../assets/images/mainscreen.png')}
+          style={styles.image}
+        />
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} scrollEnabled>
           {
             <View>
               {
@@ -53,6 +57,21 @@ export default class TrucksListComponent extends Component {
 }
 
 const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width,
+    height: height,
+    opacity: 0.05,
+    //backgroundColor: 'rgba(52, 52, 52, 0.8)'
+    //backgroundColor: 'transparent'
+  },
   background_image: {
     flex: 1,
     height: null,

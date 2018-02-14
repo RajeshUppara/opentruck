@@ -97,14 +97,14 @@ export default class App {
               label: 'Track',
               screen: 'creddebApp.TrucksScreen',
               icon: require('./assets/images/home.png'),
-              title: 'TRUCKS',
+              title: 'Trucks',
               //navigatorButtons: navigatorButtons.creditors,
               navigatorStyle: {
                // navBarTextColor: 'black',
                 navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: 'rgba(66,141,144,1)',
-                navBarHeight: 55,
+                navBarTextFontFamily: 'MavenPro-Medium',
+                navBarBackgroundColor: 'rgb(255, 255, 255)',
+                navBarHeight: 60,
                 navBarButtonColor: 'black'
               }
             },
@@ -112,13 +112,13 @@ export default class App {
               label: 'Maps',
               screen: 'creddebApp.MapsScreen',
               icon: require('./assets/images/Creditors2.png'),
-              title: 'MAPS',
+              title: 'Maps',
               navigatorStyle: {
-                navBarTextColor: 'white',
+                //navBarTextColor: 'white',
                 navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
-                navBarBackgroundColor: 'rgba(66,141,144,1)',
-                navBarHeight: 55
+                navBarTextFontFamily: 'MavenPro-Medium',
+                navBarBackgroundColor: 'rgb(255, 255, 255)',
+                navBarHeight: 60
               }
             }
           ],
@@ -131,7 +131,7 @@ export default class App {
             tabBarSelectedButtonColor: 'rgba(66,141,144,1)',
             tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
-            tabBarTextFontFamily: 'Maven Pro',
+            tabBarTextFontFamily: 'MavenPro-Medium',
             initialTabIndex: 0,
             bottomTabBadgeTextColor: 'white', // Optional, change badge text color. Android only
             bottomTabBadgeBackgroundColor: '#c12222', // Optional, change badge background color. Android only
@@ -147,6 +147,7 @@ export default class App {
             tabBarSelectedButtonColor: 'rgba(66,141,144,1)',
             tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
+            tabFontFamily: 'MavenPro-Medium'
           },
           drawer: { // optional, add this if you want a side menu drawer in your app
             left: { // optional, define if you want a drawer from the left

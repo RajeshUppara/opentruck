@@ -102,7 +102,7 @@ export default class App {
               navigatorStyle: {
                 //navBarTextColor: 'white',
                 navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
+                navBarTextFontFamily: 'MavenPro-Black',
                 navBarBackgroundColor: '#f7f8f9',
                 navBarHeight: 55
               }
@@ -115,7 +115,7 @@ export default class App {
               navigatorStyle: {
                 //navBarTextColor: 'white',
                 navBarTextFontSize: 18,
-                navBarTextFontFamily: 'Maven Pro',
+                navBarTextFontFamily: 'MavenPro-Medium',
                 navBarBackgroundColor: '#f7f8f9',
                 navBarHeight: 55
               }
@@ -130,7 +130,7 @@ export default class App {
             tabBarSelectedButtonColor: 'rgba(66,141,144,1)',
             tabBarBackgroundColor: 'rgb(244, 245, 247)',
             tabBarSelectedLabelColor: 'black',
-            tabBarTextFontFamily: 'Maven Pro',
+            tabBarTextFontFamily: 'MavenPro-Medium',
             initialTabIndex: 0,
             bottomTabBadgeTextColor: 'white', // Optional, change badge text color. Android only
             bottomTabBadgeBackgroundColor: '#c12222', // Optional, change badge background color. Android only

@@ -16,10 +16,11 @@ import * as userActions from '../../redux/user/actions';
 import PropTypes from 'prop-types';
 
 import { Container, Header, Content, Form, Item, Input, Label } from 'native-base';
+import { Divider, Avatar, Icon } from 'react-native-elements';
 
 const { width, height } = Dimensions.get('window');
 
-export default class LoginUserComponent extends Component {
+export default class ForgotPasswordComponent extends Component {
 
   static propTypes = {
   }
@@ -32,10 +33,6 @@ export default class LoginUserComponent extends Component {
     this.props.Login(this.props.dispatch)
   }
 
-  ForgotPassword() {
-    this.props.ForgotPassword(this.props.dispatch);
-  }
-
   render() {
     return (
 
@@ -44,9 +41,21 @@ export default class LoginUserComponent extends Component {
           source={require('../../assets/images/mainscreen.png')}
           style={styles.image}
         />
+        <TouchableOpacity onPress={() => {
+          this.props.navigator.pop({
+            animated: true, // does the pop have transition animation or does it happen immediately (optional)
+            animationType: 'slide-horizontal', // 'fade' (for both) / 'slide-horizontal' (for android) does the pop have different transition animation (optional)
+          });
+        }} style={{ marginRight: 0, marginTop: 20, position: 'relative', right: 170}}>
+          <Icon
+            name='arrow-circle-left'
+            type='font-awesome'
+            color='rgba(66,141,144,1)'
+            size={40}
+          />
+        </TouchableOpacity>
 
-
-        <Text style={styles.text1}>Login</Text>
+        <Text style={styles.text1}>Forgot Password</Text>
         <View style={styles.rect1} />
         {/* <TextInput
               placeholder="UserName"
@@ -59,30 +68,14 @@ export default class LoginUserComponent extends Component {
           <Content>
             <Form>
               <Item floatingLabel style={styles.textInput1}>
-                <Label style={{ color: "rgba(66,141,144,1)", fontSize: 12, fontFamily: 'MavenPro-Medium' }}>Username</Label>
-                <Input style={{ fontSize: 14, fontFamily: 'MavenPro-Medium', color: 'rgb(66, 64, 64)' }} />
-              </Item>
-              <Item floatingLabel style={styles.textInput2}>
-                <Label style={{ color: "rgba(66,141,144,1)", fontSize: 12, fontFamily: 'MavenPro-Medium' }}>Password</Label>
+                <Label style={{ color: "rgba(66,141,144,1)", fontSize: 12, fontFamily: 'MavenPro-Medium' }}>Enter Email</Label>
                 <Input style={{ fontSize: 14, fontFamily: 'MavenPro-Medium', color: 'rgb(66, 64, 64)' }} />
               </Item>
             </Form>
           </Content>
         </Container>
-        <TouchableOpacity style={styles.text3} onPress={() => {
-          this.props.navigator.push({
-            screen: 'creddebApp.ForgotPasswordScreen',
-            animated: true,
-            animationType: 'slide-horizontal', // 'fade' (for both) / 'slide-horizontal' (for android) does the push have different transition animation (optional)
-            backButtonTitle: undefined,
-            backButtonHidden: false
-          })
-        }
-        } >
-          <Text style={{fontSize: 13, color: "rgba(66,141,144,1)",fontFamily: 'MavenPro-Medium'}}>Forgot password?</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.button1} onPress={() => this.Login()} >
-          <Text style={styles.text4}>LOGIN</Text>
+          <Text style={styles.text4}>PROCEED</Text>
         </TouchableOpacity>
 
 
@@ -110,11 +103,10 @@ const styles = StyleSheet.create({
   root: {},
   text1: {
     backgroundColor: "transparent",
-    top: 68,
+    top: 76,
     left: 34,
     position: "absolute",
     height: 32,
-    width: 74,
     fontSize: 24,
     color: "rgba(66,141,144,1)",
     fontFamily: 'MavenPro-Medium'
@@ -122,8 +114,8 @@ const styles = StyleSheet.create({
   rect1: {
     backgroundColor: "rgba(66,141,144,1)",
     height: 2,
-    width: 42,
-    top: 107,
+    width: 170,
+    top: 116,
     left: 37,
     position: "absolute",
     opacity: 1
@@ -154,7 +146,10 @@ const styles = StyleSheet.create({
     marginLeft: (0.14 * width) / 2,
     position: "absolute",
     height: 49,
-    width: 162
+    width: 162,
+    fontSize: 13,
+    color: "rgba(66,141,144,1)",
+    fontFamily: 'MavenPro-Medium'
   },
   button1: {
     backgroundColor: "rgba(66,141,144,1)",
