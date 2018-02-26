@@ -12,6 +12,7 @@ import TruckDetailsScreen from './trucks/TrucksDetailsScreen';
 import TruckProfileComponent from './trucks/TruckProfileComponent';
 import TruckSearchIconComponent from './trucks/TruckSearchIconComponent';
 import ForgotPasswordScreen from './login/ForgotPasswordScreen';
+import SearchScreen from './search/SearchScreen';
 
 
 // register all screens of the app (including internal ones)
@@ -27,4 +28,5 @@ export function registerScreens(store, Provider) {
   Navigation.registerComponent('creddebApp.TruckProfileComponent', () => TruckProfileComponent, store, Provider);
   Navigation.registerComponent('creddebApp.TruckSearchIconComponent', () => TruckSearchIconComponent, store, Provider);
   Navigation.registerComponent('creddebApp.ForgotPasswordScreen', () => ForgotPasswordScreen, store, Provider);
+  Navigation.registerComponent('creddebApp.SearchScreen', () => SearchScreen, store, Provider);
 }

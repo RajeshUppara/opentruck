@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     width: 74,
     fontSize: 24,
     color: "rgba(66,141,144,1)",
-    fontFamily: 'MavenPro-Medium'
+    fontFamily: 'MavenPro-Regular'
   },
   rect1: {
     backgroundColor: "rgba(66,141,144,1)",

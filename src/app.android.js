@@ -4,7 +4,8 @@
 
 **/
 
-import { Dimensions, Alert } from 'react-native';
+import React, { Component } from 'react';
+import { Dimensions } from 'react-native';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { Navigation } from 'react-native-navigation';
@@ -15,6 +16,8 @@ import * as appActions from './redux/app/actions';
 
 import { Icon, fonts, palette, breakPointPercentage } from './constants/styles';
 import { navigatorButtons } from './constants/navigatorButtons';
+
+import { iconsMap, iconsLoaded } from './utils/AppIcons';
 
 
 const { width } = Dimensions.get('window');
@@ -28,12 +31,16 @@ import { registerScreens } from './containers';
 registerScreens(store, Provider);
 
 
-export default class App {
+export default class App extends Component {
 
-  constructor() {
+  constructor(props) {
+    super(props);
+    iconsLoaded.then(() => {
+			//this.startApp();
+		});
     store.subscribe(this.onStoreUpdate.bind(this));
     store.dispatch(appActions.appInitialized());
-
+    
     //var homeIcon = <Icon icon="briefcase" width="40" height="40" color="#E7ECE9" />;
   }
 
@@ -68,39 +75,27 @@ export default class App {
       case 'loggedIn':
         Navigation.startTabBasedApp({
           tabs: [
-            // {
-            //   label: 'Consumers',
-            //   screen: 'creddebApp.ConsumersScreen',
-            //   icon: require('./assets/images/home.png'),
-            //   title: 'Consumers',
-            //   navigatorStyle: {
-            //     navBarTextColor: 'white',
-            //     navBarTextFontSize: 18,
-            //     navBarTextFontFamily: 'Maven Pro',
-            //     navBarBackgroundColor: '#e03333'
-            //   }
-            // },
-            // {
-            //   label: 'Track',
-            //   screen: 'creddebApp.AdminScreen',
-            //   icon: require('./assets/images/home.png'),
-            //   title: 'TRUCKS',
-            //   //navigatorButtons: navigatorButtons.admin,
-            //   navigatorStyle: {
-            //     navBarTextColor: 'white',
-            //     navBarTextFontSize: 30,
-            //     navBarTextFontFamily: 'Maven Pro',
-            //     navBarBackgroundColor: 'rgba(66,141,144,1)'
-            //   }
-            // },
             {
               label: 'Track',
               screen: 'creddebApp.TrucksScreen',
-              icon: require('./assets/images/home.png'),
+              icon: iconsMap['ios-analytics-outline'],
+					    selectedIcon: iconsMap['ios-analytics'],
               title: 'Trucks',
-              //navigatorButtons: navigatorButtons.creditors,
               navigatorStyle: {
-               // navBarTextColor: 'black',
+                navBarTextFontSize: 18,
+                navBarTextFontFamily: 'MavenPro-Medium',
+                navBarBackgroundColor: 'rgb(255, 255, 255)',
+                navBarHeight: 60,
+                navBarButtonColor: 'black'
+              }
+            },
+            {
+              label: 'Search',
+              screen: 'creddebApp.SearchScreen',
+              icon: iconsMap['ios-search-outline'],
+					    selectedIcon: iconsMap['ios-search'],
+              title: 'Search',
+              navigatorStyle: {
                 navBarTextFontSize: 18,
                 navBarTextFontFamily: 'MavenPro-Medium',
                 navBarBackgroundColor: 'rgb(255, 255, 255)',
@@ -111,10 +106,10 @@ export default class App {
             {
               label: 'Maps',
               screen: 'creddebApp.MapsScreen',
-              icon: require('./assets/images/Creditors2.png'),
+              icon: iconsMap['ios-navigate-outline'],
+					    selectedIcon: iconsMap['ios-navigate'],
               title: 'Maps',
               navigatorStyle: {
-                //navBarTextColor: 'white',
                 navBarTextFontSize: 18,
                 navBarTextFontFamily: 'MavenPro-Medium',
                 navBarBackgroundColor: 'rgb(255, 255, 255)',

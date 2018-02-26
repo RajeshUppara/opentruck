@@ -38,7 +38,7 @@ export default class ForgotPasswordComponent extends Component {
 
       <View style={{ flex: 1 }}>
         <Image
-          source={require('../../assets/images/mainscreen.png')}
+          source={require('../../assets/images/marker.png')}
           style={styles.image}
         />
         <TouchableOpacity onPress={() => {
@@ -48,7 +48,7 @@ export default class ForgotPasswordComponent extends Component {
           });
         }} style={{ marginRight: 0, marginTop: 20, position: 'relative', right: 170}}>
           <Icon
-            name='arrow-circle-left'
+            name='angle-left'
             type='font-awesome'
             color='rgba(66,141,144,1)'
             size={40}
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: width,
     height: height,
-    opacity: 0.1,
+    //opacity: 0.1,
     //backgroundColor: 'rgba(52, 52, 52, 0.8)'
     //backgroundColor: 'transparent'
   },
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     height: 32,
     fontSize: 24,
     color: "rgba(66,141,144,1)",
-    fontFamily: 'MavenPro-Medium'
+    fontFamily: 'MavenPro-Regular'
   },
   rect1: {
     backgroundColor: "rgba(66,141,144,1)",

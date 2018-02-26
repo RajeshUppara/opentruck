@@ -1,4 +1,4 @@
-#Sun Jan 14 12:32:00 IST 2018
-base.0=/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/transforms/dexMerger/debug/10
+#Mon Feb 26 18:06:22 IST 2018
+base.0=/Volumes/work/projects/MyProjects/opentruck/android/app/build/intermediates/transforms/dexMerger/debug/30
 path.0=classes.dex
 renamed.0=classes.dex
